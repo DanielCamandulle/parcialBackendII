@@ -1,0 +1,33 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: elaparato
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/el-aparato-camandulle
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:elaparato
+    username: sa
+    password: sa
+
+jwt:
+  auth:
+    converter:
+      principal-attribute: preferred_username
+      resource-id: api-gateway-client
+
+el-aparato-camandulle:
+  keycloak:
+    realm: el-aparato-camandulle
+    clientId: users-client
+    clientSecret: XYYIgaUXwauUK2YXbkwwbL3F9o6eJ5nd
+    serverUrl: http://localhost:8080
