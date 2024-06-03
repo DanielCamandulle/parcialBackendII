@@ -36,5 +36,11 @@ public class VentaController {
         return "Venta editada correctamente";
     }
 
+    //obtener una venta por id
+    @GetMapping("/ventas/{id}")
+    public Venta getVentasId (@PathVariable int id) {
+        return ventServ.findVenta(id);
+    }
+
 
 }

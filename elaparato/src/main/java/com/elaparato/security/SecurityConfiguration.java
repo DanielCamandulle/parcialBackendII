@@ -43,9 +43,9 @@ public class SecurityConfiguration {
                 .requestMatchers(HttpMethod.DELETE, "/ventas/**").hasAnyRole(VENDEDOR, ADMINISTRADOR)
 
 
-                .requestMatchers(HttpMethod.GET, "/users/all").hasAnyRole(ADMINISTRADOR)
-                .requestMatchers(HttpMethod.GET, "/users/username/**").hasAnyRole(ADMINISTRADOR)
-                .requestMatchers(HttpMethod.GET, "/users/userId/**").hasAnyRole(ADMINISTRADOR)
+                .requestMatchers(HttpMethod.GET, "/users/all","/users/**").hasAnyRole(ADMINISTRADOR)
+                .requestMatchers(HttpMethod.GET, "/users/username/**","/users/**").hasAnyRole(ADMINISTRADOR)
+
 
                 .anyRequest().authenticated();
 

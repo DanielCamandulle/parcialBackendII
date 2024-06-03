@@ -1,5 +1,6 @@
 package com.elaparato.controller;
 import com.elaparato.model.Producto;
+import com.elaparato.model.Venta;
 import com.elaparato.service.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +31,11 @@ public class ProductoController {
     public String editProducto(@RequestBody Producto prod) {
         prodServ.editProducto(prod);
         return "Producto editado correctamente";
+    }
+    //obtener un producto por id
+    @GetMapping("/productos/{id}")
+    public Producto getproductosId(@PathVariable int id) {
+        return prodServ.findProducto(id);
     }
 
 }

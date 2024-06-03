@@ -28,6 +28,6 @@ jwt:
 el-aparato-camandulle:
   keycloak:
     realm: el-aparato-camandulle
-    clientId: users-client
+    clientId: elaparato
     clientSecret: XYYIgaUXwauUK2YXbkwwbL3F9o6eJ5nd
     serverUrl: http://localhost:8080
