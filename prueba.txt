@@ -1,0 +1,3 @@
+La configuración usada en springboot es con roles de cliente.
+
+De todas formas se cumple con la consigna de crear roles de reino y clientes.

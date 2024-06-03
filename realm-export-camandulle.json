@@ -510,9 +510,9 @@
   "otpPolicyPeriod": 30,
   "otpPolicyCodeReusable": false,
   "otpSupportedApplications": [
-    "totpAppGoogleName",
     "totpAppMicrosoftAuthenticatorName",
-    "totpAppFreeOTPName"
+    "totpAppFreeOTPName",
+    "totpAppGoogleName"
   ],
   "webAuthnPolicyRpEntityName": "keycloak",
   "webAuthnPolicySignatureAlgorithms": [
